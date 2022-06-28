@@ -1,9 +1,9 @@
 let playerName = prompt('SHEEESH, qual seu nome big fella?')
 let points = 0
-let threepoint = +3
-let twopoint = +2
-let freethrow = +1
-let decreasePoints = -5
+let threepoint = 3
+let twopoint = 2
+let freethrow = 1
+let decreasePoints = 5
 
 function threePoint() {
     points += threepoint
@@ -21,7 +21,7 @@ function freeThrow() {
 }
 
 function removePoints() {
-    points += decreasePoints
+    points -= decreasePoints
     console.log('Man, wtf?', points)
 }
 
@@ -50,9 +50,9 @@ function playerMenu() {
                 freeThrow()
                 break
             case '4':
-                if (points === 0) {
+                if (points <= 0) {
                     console.log(points)
-                    validation = false
+                    break
                 }
                 removePoints()
                 break
